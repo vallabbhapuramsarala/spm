@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Notes</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ICtJ6ubQ68SIxuLqMLdlz5610kepgkThaiWwEoEolLzVD39LOPt07wEZ3FmAGfjtEdVfSajbR4e4uls6-0_XjAiS-LDQWZGX5RAmtZt8wge0-t4KzoasL2c-rGVXKqYxLufDC9SJF1dqlZ2fSuCkJ4q1z_wmhEGbLjA34E4ZublK5dDSEE3Yh2DdUE1DOy3XGcJiLRAU7ZVI3KJDvDxgYjlVr15bjZlIl_rK9ORaxOOAB0hEf7af28hJIoUtHr2-nPYMsyPawGPBrw6Fqd7IDahbcGTONrxPM-oQ5X7bxZMAqbdIuBOl1aqhAGIpBsnfve9xYSvu0p3JXQWBW-Z64sPllaZEcqeOnnt8hL5_WNO23iWuBv41MdTgAfez4UUvXoAw_mzLEMHrFStwLpNw9r-41OuqoDz-MgYKKrT4EB1FyTNavpjsK8FoHQMsGXct0bdrhomyLC46ZM9QUM7_e2AbezLGpdA1dMd1THPVEq8Whwfpl8v7fMxcJJNM47g_auh23fHq-NIJrlu_j3OUaCXaSM8L8a7B1qhfc8Mzni7F_f2876gZPWIlskNocKYLX_wcMnFeocZkR-VpEIzk1VxW_md_23WM7MsrXUyo39ngsc7mK2bkVB7oYtbcdYF82e8lPdGRZY5ZT-asr4PKHvrjfjvgngz_NhZtj8rWMj2KHgKOFRSdUZT52edNE1HL1CugCYyTiNnJIQV0baXz3kzlCm9b3-8O8d1NM8ZR1cTDXm1ygwwbTW_rvFUuLBhv4FO7ikF4QjVnPvT_X2k3XEhWypFsRe87-bglp9PHIHkpiKuJAkO0kzEzwRW8QsII3mRWljaRo2OURUG8obvu3z5OMd_ZRXnUqplfFb_NorU7yszj9ZzQFoerNhTAO7LG5DB5G_FItUQbNY_13dZy-Ai91UmL3T1wl5eKsOTZePao_u9b1ZrdMAZucrxT7AjkfWqGnYXkNahhUfgq6ol5pvJVaENZuFI8NztfFP4E6SPzAkhm7gnyoe1fByE6VvgjMUpe8uDYpXILGzhI-Qhr_Fm_f4247pUux5ArEidLrJByYBRZrEweymLdkxXIFkLRaTuAgUkItSsVOrcBMq1tP3FVIIM8eMv5XPY-z7yFolX9bDMCoZjmBE_pYMjISwZI690C84ejjfZk3tR5yO_mPZ2Dv5eFZWxKs6whKhKzHeoKt9glIYv5Yhnjn7Yh1mdrZWTcvj6eomQp23kzZqzoaAEhatDXU8gwlvJonoNCTLcLxGGvOl0lLpoRNPTlM4ARzleB6F9c9vneA5Hgc5rX_QuNRrBf9PIlpq60uW5CtxFiGJAfxV96l-nb5hFxzsZWhVNCppypCWhC0rUfswDZi4zvLEiFqgTlZD6uiQAP2gjFT_orKdhs6RXkbubobaksbhF2mbQrJiipuLZ2NjDzPTw-T9vl6HB817HuLuxxzX8VoD02kj00-X2ik6oVUsvL7-b9ybAGu0o3YEQLGT_GpQxGXc1z-3bQMbzmYbsXjZsanzQ2icT7wwFoymSJ4ZfcJXFbgbq3MUGxSqI3hggANiJ6tl8uuoOUf6txXs-qS_kZ1k4mSd_E7FTUdIltTn1w0RFySNBWl3hajolrXy6zGFaq_dY3ezURmjUREswefU8LQybK08rN1mtcgocfK7rKXrbB6_0nRUAEPR03H_41V-VWL6PghuM3cTbgqc02Vrd1r1IeMdAY-7wCn95JlsNr" charset="UTF-8"></script><style>
+         table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .btnstyle {
+            background-color:blue;
+            color:white;
+            padding:20px;
+            border-radius: 8px;
+            border:none;
+            font-size: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+        {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+   <div>
+        <a href="{{url_for('addnote')}}"><button class="btnstyle">Add notes</button></a>
+        <a href="{{url_for('home')}}"><button class="btnstyle">Back</button></a>
+   </div>
+   <table cellpadding="10px">
+    {% for i in data %}
+        <tr>
+            <td>{{i[2]}}</td>
+            <td><a href="{{url_for('viewnotes',nid=i[0])}}">View</a></td>
+            <td><a href="{{url_for('updatenotes',nid=i[0])}}">Update</a></td>
+            <td><a href="{{url_for('deletenotes',nid=i[0])}}">Delete</a></td>
+            <td>{{i[4]}}</td>
+        </tr>
+    {% endfor %}
+        
+   </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add note</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=41VKeIWhiJ2310br9Nps8DA2rqeWJFW_WonMxTYIDbk9ICKDLJ5Rp4-M5T2hVZ6MCNM8beY1p-L50VUeMC3pOvpVH_ucnKW5LKFLjNPOhqVoiqpAI7zPNF75fRF5eTKPdZsEG2TjsVql1eOXEQ2XPZ763qnjpLLjZF6k_5_G6ijYIWlohvx_Ot5U-6u-w4YL9VWu3yF-esvk-Vfi20w3B9JfcWB-IfiKwcrue3Ax8jss3VibntmnD1cP3vdmqkROfENTtR2_48EP8znVS76Vt9THQdm3Bjx21visS2t2B6xdgCC7mD23grw7-VUv_OKUToW1ek9zAQ0Wjk2rwYBWDeaKDcleX7VwDu5pIHsZswcnxkc8_UhU0Ugy2UCrh4-Lzh8k8SbGEv6p5-JC7T9F_-Pc9Oe8Mkd1NFXDWwxQR0wSjsuwChha5gGTkMmSJdRdFwO0KOhQ8bE770FY3hWSbcjJei6JqFXUAL0iIh2ZjcQgjiH6aJUI5BtYsP2AXWqtgDr87eo2iN4eX3yKb_MLNXFdUgJ0JO9WkfI4HxUR41s5868nPCUFsuy49pd8JBxNkVMT8GHMlHeVLgVaRredQdLCG9aekuf6-2k_WCLRSGxu95a8RjGTJGHg1hWcohZ68m8t4vhrynQhorFzgHYRkq6PN8PEo6QTpiqa3eslDiVdaHEB8YxRe8d8WRm3-qD58lH3Aa4l2bdVg015T-WmDb405hAmayDfej7dVGv8GsT5a0t4S4NbvIWuVdTnuidaQFOFy_HG0AKoYIVL3-xHRjeHtwfFGRRrYgR2Fb3PcU7mdbt2jmz89GNKfIoYcVdOS7rUfE8jd9fwL40XPBkI-ESEnVwXRQeEk1F7xbc3Ct4kBPwBMZfCgoneVAmVuK1a0oqKmhn_yxRBNI14Psvg0fn-yackDnEg4fdenIrd8-kdqzL3Wx3uKDmUZIulJraGnfQksUoAxRa6lmi1j9Hoh3BbrLpqZLR5jKel_D-0Md1BabAcn-RzK9d55VDlHzFhF4V3Ql55BR7c_bExGGcj4rc5nXY5pI4h1-zAS31vt_bLka4-WRLZT6-YPxMloNByelAXnIvON-UghpU7vRBl4W9HfHlKUKSYCakbLdZt7oJyafx0wbOVarbdrJv-9ZsleM_L3pobnodjB8WzjjivKYtUfBofAp144xRx-ZO3gXnXAnGuM0ApK0Tp_OnZoc-kFuqoNv8iOglJAG8sSuVej9N95mZDupDFoCi9Wsbi6u9_38uKAwWuXOexrvUfkUzwMwze1osNSRJPmWc41m1S1lmoo3h_8BI_Df-fBNwUFyhBpfljMrYR89b7t8js0G73ruywmJb_be8_DUM3aN8Ad-dAoAbYP7rYrQ4YzR08TjR54hi0r-sGiEfRyMSnqRLMf8J4iSSS2BzEzfOAIJ9MdZT_mThQVIBp8v08WgXzvwOm7HQjh4n_LR_fATkCdVjdEagfMvag0ttFZVZYuSegz-Epg2gKEmY24_5ZbUkrmoZIq0e0sqOSpYy4PG_bwzV-pAFBcfLQLT4avPQ09dGssjSMUdMV4blGuvFicuKj6ZGuBZ3nWMlEJ4CnBG-my8P6MozYMhGTkYdZrp7xnzVMQA" charset="UTF-8"></script><style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        body {
+            background-color: khaki;
+        }
+        .btnstyle {
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button style="float:right" class="btnstyle">Back</button>
+    <form method="POST">
+        <div>
+            <h1>Update notes</h1>
+        </div>
+        <label>Title</label>
+        <p><input type="text" name="title" value="{{data[0]}}" required/></p>
+        <label>Notes</label>
+        <p><textarea rows="9" style="width:40%"  name="content" required >{{data[1]}}</textarea></p>
+        <button class="btnstyle">Submit</button>
+    </form>
+</body>
+</html>

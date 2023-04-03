@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add note</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=5aLRmleHj5h31HDT_S2PKAaVvmnKpxhbTC06CaYJVItw0gvp-8f7KBmxXDRz2uf6rgxn57c0hhXJbU74Y6rlTrT9vCzNYowtBHJvDU8SHP6ArtQfAfVJWah-5sLf-Tekjt1YSbEhsVzaE0G2JExtFVlEJexDo6rvIr7JXyNKRqJ0y3qzjg3rwDtuXPM-2Aac-7gpuBz5lXfpo05SXr5BoV5WhLqCmQcxAEGGvBI88ItKLO4H-QiPeSegHRWcNOFDezIhReL9Kc3GrSbHl-psGsAgwhGlJCoA23q7yKl_ENBwsp8ehqomnCUmX91_jLyEaXYduo6ehnbF7wyVYtXasQ-KCj0-ic--SMBs2Eacg0gGqAA5PmW4aefT6LsUUodX8sFP7bB07HgK_6eq683bugHV5T3xjCmZHPVEzBJchZejW-gX3aDlCCesun8UuvYDZETw1N12QrCvJ4L8zgPW37ZhNrmO9POTJOFQcN7KAenKc8x_uNx82ceDZMPjzueiaBtI_BBpe-LCwwS0iUZgnMI_OTig3bh6dYnMFju5dFiSCmttebx_1SWuIMaK8bxQWPTO1Pp7KTSS2oNSxORhwEA5CoiPxwjrX0CJbeAYYgzjZtJAtVrlagQz_xHpb1wSlDbVSuv13O9j_g6aqJvHvRj-YqHLDjER7puUJkSwyXGMKby2rsAY8E7r8Cyb6xEoXU0ALweOcR2mvss1mHKblozYJusSXnWs3nXFWh-yPATdw8QJGG640EZ7Kl96QRUOFuVo4LCoVnhnK4R3tufYPz0DORCMbGMtmsFOzRbX6NfRcVvFOh7c4nHjdSea7QH1GhIAn1qJjcTqUakLZz7--V2spHd4DXU3Pz06r0kGaAWa5nb_XmnKUQh8BtvB0xd1Juln-d1o1Er7QxihZfvbeOR3c_kMeI2ImVT1hyu0k_hNx-rkhI0IG1O0wDKIwOcGpFBCkGp49MeFUO27IozxJNkC0o80qhPHvXT9NaD0eqQ7fiKMuwmHXuNH-TreXiuaZ9qTumjlnRncxmdlvG6_0uhJ3sdpZ29GwCAON53qHAyjrbtVRycTgbfZ10mZ93UWrSIoEmLIDwotFrID5T0Wpvk9CxELr-uf2Nf1zfYV_xrwNdJDkQ08neqsl0CyOKwwfUkLIXxq9CIk-2HDhuVMm-I-1yeDzD0JtyUHJNeOuIGrymsvUmNglZZcNyui2vk8oao8mFgOJgmzdWRAbIJvbV4J1ZEnwqgjHViADJDIVOdtuL3FPZU6_oi3oJIM043hBasR5_sy_hurd_YW_e6cuxkIcIE97cRLnialMJx3dlfMHBCXS_gnN17JCdV_PuI__Gk3F_E1WM5QI2QG-OVYNkxDAKb5nvIMxWJvfW-QHnmiDNXtQOaixZp6OnuEtueDC0DIhPXdVckXjLuzoNwUrq6gT--mSU9FVTEoqIO_WgYMECrzu0ksT7hnDQYcfs6_q3LDXojfxeFdsHr64kNStf96bei3AYjRjOtvEsiNVDIPCMsTTWXSF0tddfVPJ31iaQ8kERMTlc33pCf7ykyztlGKX0vLYdR37KOyzBH7FVvnsrKoTvrWsnFXTwiE5F5UBUWWiC3K9yNY9IOdRTvR3A" charset="UTF-8"></script><style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        body {
+            background-color: khaki;
+        }
+        .btnstyle {
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button style="float:right" class="btnstyle">Back</button>
+    <form>
+        <label>Title</label>
+        <p><input  type="text" name="title" value='{{data[0]}}' readonly/></p>
+        <label>Notes</label>
+        <p><textarea rows="9" style="width:40%"  name="content" readonly>{{data[1]}}</textarea></p>
+    </form>
+</body>
+</html>

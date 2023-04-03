@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rYlMbswNeOQYCii9RML-hIeLqSqzWu1mI9p2f_l3u1taN0_dQ6_g_qUakHeieC5vCE8sJktCG8Qokf1rgYvpNH_CnSuoFcqZslWtqk8WdD_Nac3rntP2ltKsYwAHVvndg_D0X_QrGiWNREAUjWzHQRTAbHEJb3tNzj5RbSMAuXn_q-REBw7IQFmzWrummC6G-7k_2qTY2DYjacR44XuipvEJDVgP2kE4ibr68KGPStiPjwMzCQ-Wvm4-hFBGPIM_x1UDeXMC2bzEPhw01pYGzLbZfMk4UkrYcdYD7mDEwrkMcgDoaSMq1gs99DgnDREUfq4g8x2nZZQc_F7X2E4hnAvv0lqBa8pbWasHKO0PJfTYA121AZJmz4YLKcDoSQP8uuvft2NA4TGfD6ZL059hxGHaVidNchBZSpkJsARryf2L5yeBLeumPtaMyiafPg2Rff7EOQHpl02Qg_tiu_43QPflaKRw2wTQBsNk1vT11YDHcKbRRUIv0gJ-JQr8c9G3s_usF1XyXRwBqC2gd9uS15rllFowDbqLDmP0edCA-ireCHeEpcrNVzP5FZdFMLVFvrwTwNhdB1ctYr92R12ijFxlmjEWDjN7wPAvP83tEOF7aO2vu9RW15AIH5w2H9RQPnlkLfb8n__FvsWwFcKZmkQqu_Zsyj6lFFOeosEvC9JbNpdxUflzLOyUl-wzLt9btNKrgt18JMod4Ans9vf7mZnQje_PlXiR88YhR8TOxiNOis09UB6mEpv8Qrm7mjQfKni93cIyNcmVOFyo53k5knU8F_VjcFs8OlOeGdKvWDe997mbIUg_uDoiL_k7IZODspQkETU2O3Vj278TRjreuqUhsiG4Scpt4u9IKiOF-5bBknKIb3QDO0KnpyoasiMHIr8nfmgJmhq_DJrks4kukOkDB2xDIpnhKab1lwkm4j_J-xgsL0g3a2R0WEQLq85H8c99cOWa4ZY5fARVGUKabLT4w1L4IKbuhkDWV5zW5-2saqEXSQsBOXxaC4quNWhmbVqntAMrgNO0NkjCIngaYnM1cgWR5SiqnbAgjET_4mghgFp5e1_Sd3phZI4Cxg6OyT6wW0bAvXuZiQbYk5EKmHOwiiwual8wDjki779NtFZlEh6ne29XM4CT2_pxdxC1_n53uyAnj4TF7FxocInOmeQWrl8rf8PmKRhg49YOQxGoxWec6K6agbHFf6sN4pVl0afjfKf2iohPoXtZD8SUY4Aq1k8z8ziiqvGcACEn6iEs7BHBpMFVajCEIegFrcCmysy3C_ER_3ZWFJQMgq_tNKt5RPJG-VkfSu0TuTP3ENmlJ2cwKyG21RhJKkaaHvgEtmvEPWwfMjzlQA1DOoJzWXZiSoEcvVT52fliOI2OvEJuQIbQ9wWfeucjRdBKMsbivQxskXNAUuuwhPGLCWzd1PNYbZiY50TEoZZ3mbXNz2Y_cw8XcEp6RDxa_RUTnxUjlmoAGR6uYUbHHw-sfCDDTmeLHIoTAOIvegb4ZIqZE0SyvOUH_a2h3ktmdQWJua6I2fSCe6AkUZjmKx2HT4Y8HXgHa5Fd-U4mAYwEQ92JhsYPmIR8PoHnOHEeUMs8D38sqX8jii2Al_JXFAqr9VS2QQ" charset="UTF-8"></script><style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: brown;
+        }
+        label {
+            color:white;
+        }
+        .btnstyle {
+            background-color: skyblue;
+            color:black;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+        {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <form method="POST">
+        <center><h1 style="color:white; margin-top:5%;">Log In</h1></center>
+        <div style="margin-left:45%; margin-top:5%;">
+        <label>Roll No:</label>
+        <p><input placeholder="Enter roll number" type="text" name="id"/></p>
+        <label>Password:</label>
+        <p><input placeholder="Enter password" type="text" name="password"/></p>
+        <a href="{{url_for('register')}}">No Account?</a>
+        <br><a href="{{url_for('forget')}}">Forget password?</a>
+        <button class="btnstyle">Submit</button>
+    </form>
+</div>
+</body>
+</html>

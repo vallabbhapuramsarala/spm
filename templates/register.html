@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lnd1ocPv8GThu7NGq89It5m_TS1yySqMeA_ZwtljE17wSSboVpe7kMjIeQ2QmfGeC_nnT9PXM8wz8XmyJvWMlvJORg3fMB-4d8xvLfFsnLygF3xk45_0eqKH08ucopSRcpiWsoU76buwvcAgdqxBC_bmBvIB5QhlX1rkcYEyReh5-CtQ0zUSgKETBjr-DteD40ouY21kA-HvZrZ2i1oFfZpuDOn5I7HQW8ILU6pj7bUps9-nxjJA0PnmhFMZdO9sbPa1syGV2xbxt0ck07tg1r46u7IfTt_lPaczq6WHVUCyze5xrmowIjKthrKwkYVR-O4OKrx1joLCtEpDVWomEXy52FeAIGJ_3m0nZhmQMUjMv7qeIu7GDsOakenMQz__pcYxmR_a9ZM0GaK9L7Hy_-bFwnZdFNBIlcVSjfN8ELdjfBd33p6-_Mlnd_cpBRmUZh1YpzAmHr13PE_XVySyQ7-tx5yv3dAOcd_4RsKZ2MllJPNF9VvnSsXrv5vGMn58yQ9Q8zzdogW3qCinmCPYCbSoYcUbS015sn2gYHEsmv9aUc2ZqJo4xGdPSDdkr3DwP2HJHw0Gas0oKmt5opBE6hMmET-dtxqUaX2YxdmGoREekT5j_6s7JpPCAYQbswq7dIGw9Jlw3Fvywr1-nzahw3vCsSZkW4RuZD6iDOdcwKuGBKLIFI-MdN-A13_F_jNyrt0ueux8COcXrXkgAZEyqIK70IYFaqOIgJdwHrcT0ONqWH1UO4wmK9opUE4pXgCrpssN8xyq2LEtxUw6hp40AxW-zrjav8zyRRm60IrgTr0z1LqPjNj_Bv4zJ2N4E_rOxHfoj02oV0kS8eXYdY1Do-0OI5I7d0WBC14ohxc1JxE9Q96fzQKEFY8rFsHnBlOsQvTWskOA_YXHqgjUCu1JAoOfY7GeVCnpvTPNhxl7R74mgrnFmydIATk-lI3hCRer5Gy2yyM0SZ1AUwN19YaT582XG_1ZvKw6WK8tSOlFUtLMuQc3HmPrfLKsk-ZQeJjeVJ_Qdpk1MzVd31jVciB-1hViLba7jyKubtFS2xf1kIStq97mUM6nkhNg9x90SVuROFYGvBCOP1FAO6gMvPHDnc2mkGw4V3ggsHMiQwg4RZzl3FUk4aRiEqCkdSi2Db316ibWJ9x79Hp1BtQAoMBW3AQMGTcN1_rSep03bMhVCjslfmLCK0JbTR6WuAWvIe02TJRyQhuCeb0yYDWk7OXWt7mx6scSzVL_6RcygYO0ZkJtcwi8l1FrXjo2J6zeyw5tbL1sfVo5Ml9JCpkT7DJg2f0lZUgFAWVnaArwd3eKiqWC3n45cmCM7Wc2MVhKLtz06ZYLHhWnZ3HjBYPahLDJeu8lgbaakNk-tesT2zbNrO0mSpMs18qvTvvjkzzL23kmSr6_A0dhHAS7KxkathzQsEhDr0N_bt1zHvC67VLJvHLdNOMQChPTXN56o2JKXLIfoXH39MWOi2nhYOrZOHtjXVZLXZAhT8necyKA9RZqHt5FuTZKluBzVYn_GJwPdKrp7Srm3UfRgsB65m52vrlLmdzVDcHZYKg51lQA6v5EjWBDqJlb_ytrLgmF0le4YntGDLaOJwSIYMoSeKnbQowVhg" charset="UTF-8"></script><style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-image: url('https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhaW58ZW58MHx8MHx8&w=1000&q=80');
+            background-size: cover;
+        }
+        b{
+            color:antiquewhite;
+        }
+        label {
+            color: white;
+        }
+        .btnstyle {
+            background-color: skyblue;
+            color:black;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+        {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <center>
+    <h1 style="color:white">Student Registration Page</h1></center>
+    <div style="margin-left:42%;; margin-top:5%">
+    <form method="POST">
+        <label>Roll No:</label>
+        <p><input placeholder="Enter roll number" type="text" name="rollno" required/></p>
+        <label>Name:</label>
+        <p><input placeholder="Enter Name" type="text" name="name" required/></p>
+        <label>Group:</label>
+        <p><input placeholder="Enter Group name" type="text" name="group" required/></p>
+        <label>Password:</label>
+        <p><input placeholder="Enter password" type="text" name="password" required/></p>
+        <label>College Code:</label>
+        <p><input placeholder="Enter College Code" type="text" name="code" required/></p>
+        <label>Email</label>
+        <p><input type="email" name="email" required/></p>
+        <button class="btnstyle">Register</button>
+        <a href="{{url_for('login')}}" target="_blank">Already Have an Account?</a>
+    </form>
+</div>
+
+</body>
+</html>

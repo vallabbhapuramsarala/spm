@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Personal Record Manager</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=auA93VfcyZ0ongHXXPoKTT0DgGIiFWkR5caGm_12jSuy4MIG5GlHaHK5HSYPEANQU7qlWiXqULBBlVd-c7sC_uvxwHZ9HfhxgBRhvOfwAxHeSBxVR4VnHlpl3ovkVtP2VNZ6yAoXeglk2FjTU1oEJP2v5lWJmnnThMkaKthHz--1YRhHE67LqvzC7EuyVTqHRw9fL5jyXDIzoWSaiAoxItilapFXsa0fNEWtQqTPhUmGLq8A4A5aqhzGbJ4k1TbO8g12rssS4SLouw6CxSKhS8rWZQ_79e6SwbKkG4N8GMr06ak1KxPgqd0Ptu9DokXHWEQGDmMXNZLIXLEi0dTMGkWk95ypXh6eoekodu6aqjyx-97AVUmv62o27lepXUPNBErAmVw6qFDm6X9JUBytW6n_aPRtrq1r4tAwNzCkq14zHZNzRLOTx5RuR0quoniVtT92SuSRITsxj14zBW3oSG7LzmTbcoo5A9Qtyn4ExkvDC_2iUaaB32ALmWOoF5TK6MpkWD_cOMuxLw1fh4hAIXW_e3LLl4Sm5oMKlpPfvF2_MYKeaB8puZtMDd9IUfHTLZfolbNqgjjMbXGvoJH679sLOLRArqf88_vq8kWcb15insyQZJ9zpkIm_mq18-hGMaqT8bL3VAUi9POmq9J4B7qrFDqmauuMC1O1vq0qMTemzR-DHDl_K3xfWzwGbdFEQNlwQoKvRiXykETWgxLJyuRZgxBU532JZM67j8g35F0bhMOq280-3AEkG44KjV3Z_ihCuUJ8EZPlbEkWsGtBh-ZLMMRYc3-JOEjPChVUoFErQ536TJwDLgeFENsJzCwEsUAKsejrG2_JbVW7NWy5PDMV4jxFS5KYIZuE6LCL_zyY8sV7gzTAVHyj90EPW4HezoZDGmWnvU8chVR1eT0yDcVqkM-MV66si1jiGV02RMZBINIyV2ALuhGRo1NXnZngrqcso--RqhJk8q6jURj6tLQHcm92uBOYMWopsuuB3xpxjpExLQCJhs5I2wK0GJNWs1oPpFfLtQrjhgRUzf5g0WaN04qeeV6J2ry_gnveVru-F8WMhwsv_XZMVX2GInalPvga-YUH1FUDaQNJij4S7U6ziQqYEsA957NKiIh9SgjG8-K5SIpbRkQb3-8mvU9JdpOVYKF2ciTv5Mdy5Lm3j-fC5jVByJ2F8vItV73z4D_0_1vH_qpQlOlgnCV60fTbaNcnZIgnES3hFfvDjDjizC7t62ZazxFymfEGhMcR0OfdgANz0utEGtwKusHEbF79TeLZtdhDVQKvrHuXOTLmpj_21cZR3hnvCmMdqvtVln1fzkrPd-aJSVZ7l_QTQbIoWPAqasa8-SObjuxlkxD7m1xh7mwLFpCAycdcd75XspP7U7XDQ9sz5DSslkUw6pAEWoERL41FZTJFBScF4AAAXUKwoW24tliCfqZlgljn2Q0AzlYbMMZX3WZsjT-HF3S-3WJWUWcdK4iNC_i6PciEEIeV9rkuISCHUI85mxcG-5p0wJflDDSb2pWbBQZbpSSoPcD3JqGL6Nq44ALxhPqhUNtC0DG3nR7BkgwqRCgcfCjJA4aOu6CUe9lUK09aT91DQv1luuvErSOpJ2g3tfePPA" charset="UTF-8"></script><style>
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        body {
+            background-image: url('https://blogsmedia.lse.ac.uk/blogs.dir/43/files/2021/11/blog-1-1.jpg');
+            background-size: cover;
+
+        }
+        .btnstyle {
+            background-color:yellow;
+            color:black;
+            padding:20px;
+            border-radius: 8px;
+            border:none;
+            font-size: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .student {
+            margin-top:23%; 
+        }
+    </style>
+</head>
+<body>
+    <div class="student">
+    <center><h1>Student Personal Record Manager</h1></center>
+    </div>
+    <div style="text-align:center;">
+    <a href="{{url_for('register')}}"><button class="btnstyle">Register</button></a>
+    <a href="{{url_for('login')}}"><button class="btnstyle">Login</button></a>
+    </div>
+</body>
+</html>

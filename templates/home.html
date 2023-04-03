@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Personal Record</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yFo1aT5hi9C5YgMwV5g5DKSm0nLDUtKX_S5eZwnx17A1EWz5J6t6veCHZGDtbNkBm5_9_T4muL5xj5dZZQdVKltX4gdpLCgpP6djD7m_S57LfKcIhMv47qfDhhTSzUIDxdPRE76ZGlCitk83NNm4rAqW6fnZe0cEoBRW-leA9Qfk_q5YDbRqSUOVNEH0kLpgbaWtZ5vJwYGb8mGh9DAFzsP1V8kSXxUxbZUIQ88bauhnPbHFjOJfVsX7Vigbjk6t5lZNlAcjPXf6IrHMH3tX1g4IFIlHZvkIP5WL1aDlT3ykiiC6BXxbT2YT3_Z9oYcqm4Zd0Y0irl6fE81xTpyvZRhZUDBXHPNo5Cg9OaxZSJyBDv_KQOd4nUY05SQmbS6KoqAiE9tRbUVd06t8eli0RBX7hGr-icEUxd_ccrYds_lOl7pPYlw41LQ-gJAd_Rt3wznY5iJJgW0TCdiipfpp3jR0fLyTVjOAjtbhg0SidZAU-qNfpE160oFH9l7MnQCAq9naGdDzSLwj9kEI4T-8IlaSlBsWyMW1qZ0Bdml-CdF4BAp398XytcHjPwdfJF7cIlLs7d-Y7iQCzsVm6UnxDcjpJEwyTdQS5Y2buHbEbrax1i4O3Vw54seqscHyzJONiLoMn_-PWtPfKgsi2bsrF7MhljPuCNuv1EuA8xZ2oX5z9pErZ46VvDKrZS7MQ6Kv07aWXcsk-KFblP2Xw-hYtJpTbTsY9jL1fpKyqNN-425rGotyve1MssRvbOvKNtowOTDQmY4mL1CfrXRtkWhpdyT1G54gp_lZXHbwE5L9KI6QfscFSVCmJaVjwNCRB1H8A2lfy0liYESJ6TYWldLH-DJ9HIeIvdoxuOncg65ZuJm5dezqIAGx-mTb-EEwmulIPiUKRHabJ-xO1T0FwrCuBfi8XBXaXw6eyH45k9kh2RVogYU7zGh7aMGeTO-jS_neUXOpz5q5BtXWGEZGOF0srqutdRFFLaA5wth46zvqkDBZyVN6hY0ci1T7XXOcc1e7_2pynkUIjXsx6PmBOlrlRCo8J9j3w2FdnktyzAIbwHe2eQiBQgN3dxz4ajOseaL3DuaVilHfJbFiK8vrSO3XZZXUUQAZO-ZU3ZxwVdB1cmvFrlaE8aYoA1dTl-mmW0F0bZKF2iLcJQFbWC6XBdG2PZfmAGmJLt_-IMhXpagYW0VwkOq5NUQWvlZwAb-OfNKiMuYf_u9HUQpp8O9Do1zYaoxDWHWa-fGwhwBsHIx9c4Ctm0ughpVUiMnYBgvuTLARFOWD0cssRBF9QQNY4tjAjzQGSDgtLFNuQzbhaUlA7xGfWXMAapPWiCFdwj9xWWQSuJCN4GotAWksnpkAzUlkriaUEfdkFPHD7SIxAmhRQaJyFLRIrTPRVuprXapm6LrLWRHy4HwVd63wDXriIzPsxv664_wx6VE4x3gjyP0s_PJowey9hF--y27HIG2IUK2NLcZCwbrkgYFYhSFkpvYnotxwrjsCHFLbpIPazHv42C8-6Ct-9PSKoBvyLuX1-sRhG6oDIWS3ZhnQzQMrAif9toRt4ym-CRI_uDWdB9Bz2PtKVNq4VzdYQ2tQGinGc-rpRJtpwvlEMoWsQVaKRL-pbQ" charset="UTF-8"></script><style>
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        body {
+            background-color: royalblue;
+        }
+        .btnstyle {
+            background-color:yellow;
+            color:black;
+            padding:20px;
+            border-radius: 8px;
+            border:none;
+            font-size: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>    
+</head>
+<body>
+    <center>
+    <h1 style="color:white;">Student Personal Record Manager</h1></center>
+    <!--You have to give the links to the specific pages where the notes and 
+        file pages need to go-->
+    <a href="{{url_for('notehome')}}"><button class="btnstyle">Notes</button></a>
+    <a href="{{url_for('fileshome')}}"><button class="btnstyle">Files</button></a>
+    <a href="{{url_for('logout')}}"><button class="btnstyle" style="margin-left:65%;">Logout</button></a>
+</body>
+</html>
+
+
+
+
+

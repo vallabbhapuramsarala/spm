@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP validation</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_DraDrII1l69kXWsvlGV545giT0hKMAdAEvXX4qVTZ2SF8zn0yXER2QFrXSKk3lHbqIdz3TZ_snnSVGDnJKO7A1FYrTD3VTFAgTjGuoG5_3Z36ne83OZYWSaY8i-qxWoDNMFGRc53Tewt9mGc9O4WcY2TeGNjIJ2aNSTuoNFKizgf6PgpFiHcf4aUdTRrJlcrejyaCHyohKlU9XNhdASm-w6UO7SC9f-N6m1HfetldCeraibr5vIkUZWRsRG_a98SN1u_S-dPxrCyLNW3kwOIgqZ9u0E1jRzRTyzcLIzrkyAIkIAN37veyHwg2Fi2QhrLkrEtKnnywFyTcx_NVH3RkKzvlYgXK8-cJB8ivDo0NRpTuN7EZSzB_6gW0035sz_WjZKN3u1UulyAOkTtIgMvC257dWw4LjRKpE-IeK5IyaEtvTLCmJlMuOgzzNhRPp-5WSS2NCk15tMS2ruMgbXmTzKx14JO4WXeC8G4bI-RsGcEWEBW2V2CugZ_Z0V-aoWbPfNghWqV6OVTb2jEDfKxIuLWg7ylfGs03FQOkN6-i2ZtvLWkrlW7wTOdqTHU_4ftbJIClhG2Cy2tpFRsv8UP-kSeyDJAqVZ3wy8ub6LxoSsTbbQtoJIfvzHX5gN92654Kr3fZnK5haF5tmWvmhUxhXUhVTf_AEL81_1jzkeSP_mcxSRS3hDpeoOuM90t-uXif7JWw39B4ubtGVbtuOi4K6319M69KafeuCUhM3NuBteUmyH-kxCihwWKgyCnHfLjk_gaDXHex4UsB4a2zICBff-fyh1oDCbw82ZOYORXRLniP3hLXWvdOhknAh_gCAFpJmBdIbtcaXCeBwMs_xctsnBilIZm_TNl402M4zDMdZ3yTI6VbaqH994zhk8CdS0s34J8ShJWVkh6BuSBzduopJbIiwrIL9pDJQUqgO1SG_hsLRODIEF0EXoKAILSV7qw8romtR7fUEa86ISKSQIzbQHgHABI0CZg2I_SNVk8XxV0xP5j7rBaLnG52G4J5xrZEMWnwEpfS46wn7ZFszLKBxYIjykVj2hTFC_FCqjV1ifGRt1zdWqSQn6wyEcR5n38sfrRYIB3IAITFkHR-haecFf7pdfQBMqMDmMiZqco3oye5Z5ZIH8i1dHgY6NSz9QzGBUkbDOnP8e9CNKpAzuihHP8kGjzcgVNzrvdnLVUL2CClXscQAU_pAiaIFxgvNeHiVf1ULYsK1btV4bWy9gKxR5daQ19y91hUU7c9hUszY3vNY9iqWB1FQrT7S0C6gld2sOvTiy-CWOnSWJerJOPn2LtXKQQMhPRz01qfGiDNXXgiRMWKAMdEPXGS1Nima2ULRdDUuQb9KcGiWqkqrZFL2MRMMibvrakkkWXF7TaEPmecFfg02UUavyEpQduLealTFsFImLiqKYa06hvHQMpSV2HS1hInMOyVSxI0R1bmUlO6UNWWCUCVhG7ndDHO487oNbIJx1cgMa2T-YzQFntDkVL7bagpOPjYoQZRzRwYmsq2aDpl0N6tN2AmYtOLzg5JB1Zeyg9cu_aZNkysrT8D1v2uphF_-q9xQg4uVA_cfuFaJ0c9nSuO0T_euGtC1vWjUxsbTa3HtApOHxQDNs_g" charset="UTF-8"></script></head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <form method="POST" action="{{url_for('otp',otp=otp,rollno=rollno,name=name,group=group,password=password,email=email)}}">
+        <h1>Enter OTP</h1>
+        <input type="text" name="otp"><br>
+        <button>submit</button>
+    </form>
+</body>
+</html>

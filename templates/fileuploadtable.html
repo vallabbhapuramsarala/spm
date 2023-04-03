@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File upload</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QVpbbGl8KZel0THzFaedRng7dU4jPLfVOp6a_XZbTs-agDsjkzblAy8b5FkAPAu1k6e2IIBzWH-R2HVRk7hKD6Bb7l6Xkge3hHEwIqGV9knvlaYySfe8NFD6Z3kjKyPLgCWvRkKcidvV884W-2pmbl3h7rmDT4adfPX-hslkuGFBxZfbyaImqbr8TwLj_vAZl-Bx6b5E6_-O89gLzc4BRT379ywWPmIfTNiDPrj2J7OkKgnsn9k3ZWJdlL3XV9xxjRMWVYYK3kpiKJ20ErzlNA_jzwKFOSkP0HhndhVHnClE3aNApgMQuFaFHQ0ctkzQyYNVfRSfAcZmULO2Tvd64OykACJMz6eBIfRj_UliXxMiOFI5DvkSGg14prttGWxXFME0XqmDZUkeBzPbO3DRQ7i0dYk10fsuRIH6NwQS_47dngXZ7M3D0WpQM9degKSDxKn2Gp8sv7xkFBOr5swiR5gdg6ljdO6AWHQ6qwxtFLPSRH-NtAq44OiEQ4c3z-ulX5icgclm1JBYrkBWZAlFVy4y9c8j7dFzNPwFwoVIQeeNiAWN-mCujuX2QDDSbHB84-F_4WnEpR1A03JQ0iqnouTzwf5YKVWgeIAZ8WWAOQN3Z5EJtci_n7Da1qiPiVN2wg3VQ4DKgX4cbCqCHZvC8EfDzdDtZTkygXk07vP5R8FsajDgfDvbRNMOWFFDxlV3b1lYMb8CEYZkti40vb6FgoiuN7bOO7dsJoGHDNMw8WufBOhRvxkCjN8j62u3qjSe_ebWiiMxpP9u0UwsK3w5DnvuMn4CtHhAUdJDzghClGrSkkAydj0avZM4l2ycywInnx9PPuF42RZIl31rsi_SBlNs1jveDtr8x7574eek68hl9AMUxvlgmXfzDYuN6SpCY8FKfOpyndht7106FEKM4dr1DcUcXh1cuVs2tMI8BpBCcxXZlv-FJ5dPxmFHVzPh9StkY5WmvJMop0aaSfrZwrwzv-X-wrF-DjXO8w27YjUwdVNH-brKA47N_T1Rb2dejcSj-hzHQAp3mvjAUQQWUPliu8k4LguUVXpTtYMn97eUxBcOjlbtdcSbkWSL2bHFeWmi9wtzmHe3mTliG8TKvTBDBR5Epm5WnndzZwsLfaSYZBiZkEAM1QVNHrpg1GdPFJDDpTmbOZnoafC91AVIocw7MX13bHrQOayA-Y_A3imLacouIl5QeNjLwZZNXRbEYSE9bu5QD944bb6Mqr3RQi1d4ylYdzdyb-My02SJAy4dVcklivrAR6fvFU1r3P5Y2fmb-ekqq7CkrwF7ezWktbBsas2oPGdSkqdn6hIrwr6sdOaHldLZH2FLh08qohznz2N1lss8rutNUAZCVny0Q6sjuKDYCjD-k2rnEjfpGWgEIJVYtybiMhBeXMxunulTnWZqYIf31qn5rRbHL5NCbGel3mxYOWuB1ib7OtBmSu3ZXuQtiw0iL5JcbKhHRJWnSABdfQeguW2S7S_e1l0fH9SitNLApgiIAxR4tvC4O1ESmf-_3_Txsek2A0LAifmunLs9B18SFKyWgjkAOndxo9drOSRN4E6Rh7JQCtLosrzJS8hBmAyZUZSko97qVH2P_H75nIUv5pmZFSSR2oF87A" charset="UTF-8"></script><style>
+        body {
+            background-color: azure;
+        }
+        .file {
+            padding: 0.5rem;
+            font-family: sans-serif;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        .back{
+            float: right;
+        }
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .form-group {
+            margin: 3%;
+        }
+        .btnstyle {
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+            font-weight:bold;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+        {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<body>
+    <a href="{{url_for('home')}}"><button class="back btnstyle">Back</button></a>
+    <form class="form-group" method="POST" action="{{url_for('filehandling')}}" enctype="multipart/form-data">
+        <input type="file" style="width:200px" id="actual-btn" name="file"/>
+        <button>submit</button>
+    </form>
+    <table cellpadding="10px">
+        {% for i in data %}
+        <tr>
+            <td><a href="{{url_for('viewfile',fid=i[0])}}">{{i[1]}}</a></td>
+            <td>Download</td>
+            <td><a href="{{url_for('filedelete',fid=i[0])}}">Delete</a></td>
+            <td>{{i[2]}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>
